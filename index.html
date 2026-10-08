@@ -46,34 +46,70 @@
 
             <form>
 
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+                <div>
+                    <label for="student-name">Your Name:</label>
+                    <input
+                        type="text"
+                        id="student-name"
+                        name="student-name"
+                        required
+                    >
+                </div>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <div>
+                    <label for="student-email">Email Address:</label>
+                    <input
+                        type="email"
+                        id="student-email"
+                        name="student-email"
+                        required
+                    >
+                </div>
 
-                <label for="subject">Choose a Subject:</label>
-                <select id="subject" name="subject" required>
-                    <option value="">Select a subject</option>
-                    <option value="mathematics">Mathematics</option>
-                    <option value="spoken-english">Spoken English</option>
-                    <option value="python">Python Programming</option>
-                </select>
+                <div>
+                    <label for="tutoring-subject">Choose a Subject:</label>
+                    <select
+                        id="tutoring-subject"
+                        name="tutoring-subject"
+                        required
+                    >
+                        <option value="">Select a subject</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="spoken-english">Spoken English</option>
+                        <option value="python">Python Programming</option>
+                    </select>
+                </div>
 
-                <label for="date">Preferred Date:</label>
-                <input type="date" id="date" name="date" required>
+                <div>
+                    <label for="preferred-date">Preferred Date:</label>
+                    <input
+                        type="date"
+                        id="preferred-date"
+                        name="preferred-date"
+                        required
+                    >
+                </div>
 
-                <label for="time">Preferred Time:</label>
-                <input type="time" id="time" name="time" required>
+                <div>
+                    <label for="preferred-time">Preferred Time:</label>
+                    <input
+                        type="time"
+                        id="preferred-time"
+                        name="preferred-time"
+                        required
+                    >
+                </div>
 
-                <label for="message">Message:</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    cols="40"
-                    placeholder="Please describe the topic you want help with, your learning goals, or any questions for the tutor."
-                ></textarea>
+                <div>
+                    <label for="session-message">Message:</label>
+                    <textarea
+                        id="session-message"
+                        name="session-message"
+                        rows="5"
+                        cols="40"
+                        placeholder="Please describe the topic you want help with, your learning goals, or any questions for the tutor."
+                    ></textarea>
+                </div>
 
                 <button type="submit">Request Session</button>
 
