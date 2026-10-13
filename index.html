@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +14,13 @@
         <h1>PeerTutor Marketplace</h1>
         <p>Learn from students who recently mastered the same subjects.</p>
 
-        <nav>
-            <a href="#tutors">Find Tutors</a>
-            <a href="#booking">Book a Session</a>
-            <a href="#contact">Contact</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="index.html#tutors">Find Tutors</a>
+            <a href="index.html#booking">Book a Session</a>
+            <a href="tutor.html">Tutor Profile</a>
+            <a href="become-a-tutor.html">Become a Tutor</a>
+            <a href="index.html#contact">Contact</a>
         </nav>
     </header>
 
@@ -50,38 +53,52 @@
                     <source src="tutor-introduction.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
+
+                <p>
+                    <a href="tutor.html">View Rahul's Full Profile</a>
+                </p>
             </article>
         </section>
 
         <section id="booking">
             <h2>Request a Tutoring Session</h2>
 
-            <form>
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
+            <form action="#" method="get">
+                <p>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
 
-                <label for="subject">Choose a Subject:</label>
-                <select id="subject" name="subject" required>
-                    <option value="">Select a subject</option>
-                    <option value="mathematics">Mathematics</option>
-                    <option value="spoken-english">Spoken English</option>
-                    <option value="python">Python Programming</option>
-                </select>
+                <p>
+                    <label for="subject">Choose a Subject:</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="spoken-english">Spoken English</option>
+                        <option value="python">Python Programming</option>
+                    </select>
+                </p>
 
-                <label for="date">Preferred Date:</label>
-                <input type="date" id="date" name="date" required>
+                <p>
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </p>
 
-                <label for="message">Message:</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    cols="40"
-                    placeholder="Please describe the topic you want help with, your learning goals, or any questions for the tutor."
-                ></textarea>
+                <p>
+                    <label for="message">Message:</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        cols="40"
+                        placeholder="Describe the topic you need help with or your learning goals."
+                    ></textarea>
+                </p>
 
                 <button type="submit">Request Session</button>
             </form>
@@ -96,3 +113,4 @@
 
 </body>
 </html>
+```
