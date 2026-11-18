@@ -1,25 +1,21 @@
 
-/* =================================
-   1. GLOBAL RESPONSIVE FOUNDATION
-================================= */
+/* GLOBAL STYLES */
 
 * {
     box-sizing: border-box;
 }
 
 html {
-    width: 100%;
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #1e293b;
-    overflow-x: hidden;
+    background: #ffffff;
 }
 
 img {
@@ -27,15 +23,7 @@ img {
     height: auto;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* =================================
-   2. HEADER AND NAVIGATION - FLEXBOX
-================================= */
+/* HEADER AND NAVIGATION */
 
 header {
     background: #172554;
@@ -45,8 +33,12 @@ header {
 }
 
 header h1 {
-    margin-top: 0;
+    margin: 0;
     font-size: 32px;
+}
+
+header p {
+    margin: 8px 0;
 }
 
 nav {
@@ -54,7 +46,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
     margin-top: 20px;
 }
 
@@ -63,15 +55,14 @@ nav a {
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 6px;
+    transition: background 0.3s ease;
 }
 
 nav a:hover {
     background: #2563eb;
 }
 
-/* =================================
-   3. MAIN CONTENT
-================================= */
+/* MAIN CONTENT */
 
 main {
     width: 90%;
@@ -88,71 +79,78 @@ section {
 
 h2 {
     color: #172554;
+    margin-top: 0;
 }
 
-/* =================================
-   4. TUTOR CARDS - CSS GRID
-================================= */
+.welcome {
+    text-align: center;
+}
 
-#tutors {
+/* TUTOR CARDS - CSS GRID */
+
+.tutor-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
-#tutors h2 {
-    grid-column: 1 / -1;
-}
-
-#tutors article {
+.tutor-card {
     min-width: 0;
     padding: 20px;
     background: white;
     border: 1px solid #cbd5e1;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#tutors article:hover {
+.tutor-card:hover {
     transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-#tutors article h3 {
+.tutor-card h3 {
+    color: #2563eb;
+    margin-top: 0;
+}
+
+.subject {
+    color: #475569;
+    font-weight: bold;
+}
+
+/* PROFILE PAGE */
+
+.profile-card {
+    background: #f1f5f9;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.profile-card section {
+    background: white;
+    border: 1px solid #e2e8f0;
+}
+
+.profile-card h3 {
     color: #2563eb;
 }
 
-/* =================================
-   5. FORM STYLING
-================================= */
+/* LINKS AND BUTTONS */
 
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-form p {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin: 0;
-}
-
-input,
-select,
-textarea {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #cbd5e1;
+.profile-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
     border-radius: 6px;
+    transition: background 0.3s ease;
 }
 
-textarea {
-    resize: vertical;
+.profile-link:hover {
+    background: #1e40af;
 }
 
 button {
@@ -163,16 +161,50 @@ button {
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-    align-self: flex-start;
+    transition: background 0.3s ease;
 }
 
 button:hover {
     background: #1e40af;
 }
 
-/* =================================
-   6. FOOTER
-================================= */
+/* FORMS - FLEXBOX */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* FOOTER */
 
 footer {
     background: #172554;
@@ -181,17 +213,14 @@ footer {
     padding: 20px;
 }
 
-/* =================================
-   7. TABLET - 768px
-================================= */
+/* TABLET - 768px */
 
 @media (max-width: 768px) {
-
     main {
         width: 94%;
     }
 
-    #tutors {
+    .tutor-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -204,12 +233,9 @@ footer {
     }
 }
 
-/* =================================
-   8. MOBILE - 480px
-================================= */
+/* MOBILE - 480px */
 
 @media (max-width: 480px) {
-
     header {
         padding: 20px 4%;
     }
@@ -236,7 +262,7 @@ footer {
         margin: 20px auto;
     }
 
-    #tutors {
+    .tutor-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
@@ -249,13 +275,16 @@ footer {
         font-size: 21px;
     }
 
-    #tutors article {
+    .tutor-card {
         padding: 15px;
     }
 
     button {
         width: 100%;
-        align-self: stretch;
+    }
+
+    .profile-link {
+        max-width: 100%;
     }
 
     footer {

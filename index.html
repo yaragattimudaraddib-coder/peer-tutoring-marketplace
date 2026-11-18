@@ -1,111 +1,112 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PeerTutor Marketplace - Learn from students who recently mastered the same subjects.">
     <title>PeerTutor Marketplace</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>PeerTutor Marketplace</h1>
-        <p>Learn from students who recently mastered the same subjects.</p>
+<header>
+    <h1>PeerTutor Marketplace</h1>
+    <p>Share your knowledge and help other students learn.</p>
 
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="index.html#tutors">Find Tutors</a>
-            <a href="index.html#booking">Book a Session</a>
-            <a href="tutor.html">Tutor Profile</a>
-            <a href="become-a-tutor.html">Become a Tutor</a>
-            <a href="index.html#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#tutors">Find Tutors</a>
+        <a href="#booking">Book a Session</a>
+        <a href="tutor.html">Tutor Profile</a>
+        <a href="become-a-tutor.html">Become a Tutor</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <main>
+<main>
+    <section class="welcome">
+        <h2>Welcome to PeerTutor Marketplace</h2>
+        <p>Find experienced student tutors and improve your skills through peer learning.</p>
+    </section>
 
-        <section id="tutors">
-            <h2>Our Tutors</h2>
+    <section id="tutors">
+        <h2>Available Tutors</h2>
 
-            <article>
+        <div class="tutor-grid">
+
+            <div class="tutor-card">
                 <h3>Arjun Kumar</h3>
-                <p>Mathematics tutor — ₹200 per session. Specializes in algebra and calculus.</p>
-            </article>
+                <p class="subject">Mathematics</p>
+                <p>Learn mathematics with simple explanations and practical examples.</p>
+                <p><strong>Experience:</strong> 2 Years</p>
+                <p><strong>Rate:</strong> ₹200 per session</p>
+                <a class="profile-link" href="#booking">Book Session</a>
+            </div>
 
-            <article>
+            <div class="tutor-card">
                 <h3>Ananya Rao</h3>
-                <p>Spoken English tutor — ₹150 per session. Helps students improve communication skills.</p>
-            </article>
+                <p class="subject">Spoken English</p>
+                <p>Improve your English speaking, vocabulary and communication skills.</p>
+                <p><strong>Experience:</strong> 1 Year</p>
+                <p><strong>Rate:</strong> ₹150 per session</p>
+                <a class="profile-link" href="#booking">Book Session</a>
+            </div>
 
-            <article>
+            <div class="tutor-card">
                 <h3>Rahul Shetty</h3>
-                <p>Python tutor — ₹250 per session. Teaches programming fundamentals for beginners.</p>
+                <p class="subject">Python Programming</p>
+                <p>Learn Python programming from basics to advanced concepts.</p>
+                <p><strong>Experience:</strong> 3 Years</p>
+                <p><strong>Rate:</strong> ₹250 per session</p>
+                <a class="profile-link" href="tutor.html">View Profile</a>
+            </div>
 
-                <h4>Meet Your Python Tutor</h4>
-                <p>
-                    Learn about Rahul's approach to teaching Python
-                    and programming fundamentals.
-                </p>
+        </div>
+    </section>
 
+    <section id="booking">
+        <h2>Book a Tutoring Session</h2>
 
-                <p>
-                    <a href="tutor.html">View Rahul's Full Profile</a>
-                </p>
-            </article>
-        </section>
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
 
-        <section id="booking">
-            <h2>Request a Tutoring Session</h2>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
 
-            <form action="#" method="get">
-                <p>
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </p>
+            <div class="form-group">
+                <label for="subject">Select Subject</label>
+                <select id="subject" required>
+                    <option value="">Choose a subject</option>
+                    <option>Mathematics</option>
+                    <option>Spoken English</option>
+                    <option>Python Programming</option>
+                </select>
+            </div>
 
-                <p>
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </p>
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" required>
+            </div>
 
-                <p>
-                    <label for="subject">Choose a Subject:</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">Select a subject</option>
-                        <option value="mathematics">Mathematics</option>
-                        <option value="spoken-english">Spoken English</option>
-                        <option value="python">Python Programming</option>
-                    </select>
-                </p>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="Write your message"></textarea>
+            </div>
 
-                <p>
-                    <label for="date">Preferred Date:</label>
-                    <input type="date" id="date" name="date" required>
-                </p>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+</main>
 
-                <p>
-                    <label for="message">Message:</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        cols="40"
-                        placeholder="Describe the topic you need help with or your learning goals."
-                    ></textarea>
-                </p>
-
-                <button type="submit">Request Session</button>
-            </form>
-        </section>
-
-    </main>
-
-    <footer id="contact">
-        <p>&copy; 2026 PeerTutor Marketplace. All rights reserved.</p>
-        <p>Contact us: peertutors@example.com</p>
-    </footer>
+<footer id="contact">
+    <p>© 2026 PeerTutor Marketplace. All rights reserved.</p>
+    <p>Contact us: peertutors@example.com</p>
+</footer>
 
 </body>
 </html>
