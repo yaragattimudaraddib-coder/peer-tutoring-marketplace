@@ -1,0 +1,265 @@
+
+/* =================================
+   1. GLOBAL RESPONSIVE FOUNDATION
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =================================
+   2. HEADER AND NAVIGATION - FLEXBOX
+================================= */
+
+header {
+    background: #172554;
+    color: white;
+    padding: 25px 5%;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: #2563eb;
+}
+
+/* =================================
+   3. MAIN CONTENT
+================================= */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #f1f5f9;
+    border-radius: 12px;
+}
+
+h2 {
+    color: #172554;
+}
+
+/* =================================
+   4. TUTOR CARDS - CSS GRID
+================================= */
+
+#tutors {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#tutors h2 {
+    grid-column: 1 / -1;
+}
+
+#tutors article {
+    min-width: 0;
+    padding: 20px;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+#tutors article:hover {
+    transform: translateY(-4px);
+}
+
+#tutors article h3 {
+    color: #2563eb;
+}
+
+/* =================================
+   5. FORM STYLING
+================================= */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form p {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-start;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+/* =================================
+   6. FOOTER
+================================= */
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =================================
+   7. TABLET - 768px
+================================= */
+
+@media (max-width: 768px) {
+
+    main {
+        width: 94%;
+    }
+
+    #tutors {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+/* =================================
+   8. MOBILE - 480px
+================================= */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 20px 4%;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 6px;
+    }
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    #tutors {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    #tutors article {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        align-self: stretch;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
